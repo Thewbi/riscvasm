@@ -1,0 +1,23 @@
+[package]
+name = "riscvasm"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+env_logger = "0.10.0"
+log = "0.4.18"
+chrono = "0.4.26"
+#ihex = "3.0"
+#byteorder = "1.4.3"
+regex = "1.9.3"
+#lazy_static = "1.4.0"
+dyn-fmt = "0.4.0"
+#windows_x86_64_msvc = "0.48.5"
+
+# https://github.com/rrevenantt/antlr4rust
+# checked out and manually build, locally referenced
+# because the pre-compiled dependencies that are available online are not up to date
+[dependencies.antlr-rust]
+path = "../antlr4rust"

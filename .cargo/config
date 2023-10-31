@@ -1,0 +1,6 @@
+[net]
+git-fetch-with-cli = true
+
+[http]
+debug = true               # HTTP debugging
+timeout = 86400            # timeout for each HTTP request, in milliseconds

@@ -1,0 +1,50 @@
+C:\aaa_se\rust\three_address_code_runtime\src\parser\tacvisitor.rs - line 4
+
+//use super::tac::*;
+use super::tacparser::*;
+use crate::parser::tacparser::tacContextType;
+
+
+
+
+C:\aaa_se\rust\three_address_code_runtime\src\parser\taclistener.rs - line 4
+
+//use super::tac::*;
+use super::tacparser::*;
+use crate::parser::tacparser::tacContextType;
+
+
+
+
+
+C:\aaa_se\rust\three_address_code_runtime\src\parser\tac_lexerlexer.rs - line 137
+
+//pub type LocalTokenFactory<'input> = CommonTokenFactory;
+pub type LocalTokenFactory<'input> = antlr_rust::token_factory::ArenaCommonFactory<'input>;
+
+
+
+
+C:\aaa_se\rust\three_address_code_runtime\src\parser\tacparser.rs - line 163
+
+//pub type LocalTokenFactory<'input> = CommonTokenFactory;
+pub type LocalTokenFactory<'input> = antlr_rust::token_factory::ArenaCommonFactory<'input>;
+
+
+
+// thread 'main' panicked at 'attempt to shift left with overflow', src\parser\tacparser.rs:428:45
+
+while (((_la) & !0x3f) == 0 
+				&& (
+					//(1usize << _la) 
+					(1u64 << _la) 
+					& 
+					(
+						(1u64 << ACALL) | (1u64 << ASTERISK) | (1u64 << BEGINFUNC) | (1u64 << BREAK) | (1u64 << CALL) | (1u64 << GOTO) | (1u64 << IF) | (1u64 << LCALL) | (1u64 << OPENING_BRACKET)
+					)
+					) != 0) 
+						|| 
+						((((_la - 33)) & !0x3f) == 0 && ((1usize << (_la - 33)) & ((1usize << (POP - 33)) | (1usize << (PRINT - 33)) | (1usize << (PUSH - 33)) | (1usize << (RETURN - 33)) | (1usize << (SIZEOF - 33)) | (1usize << (SQRT - 33)) | (1usize << (VTABLE - 33)) | (1usize << (IDENTIFIER - 33)))
+					) != 0) 
+
+{
